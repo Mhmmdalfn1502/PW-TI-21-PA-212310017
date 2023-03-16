@@ -7,16 +7,8 @@
     <title>Latihan7</title>
   </head>
 
-  <style>
-    label {
-      margin-top: 100px;
-    }
-
-    }
-  </style>
-
   <body>
-    <h1>Biodata</h1>
+    <h1>Form Data Mahasiswa</h1>
     <form>
       <label for="NPM">NPM</label><br />
       <input type="text" id="NPM" name="NPM" /><br />
@@ -29,10 +21,10 @@
       <label for="Birth">Place Birth</label><br />
       <input type="date" id="Birth" name="Birth" /><br />
       <label for="Gender">Gender</label><br />
-      <input type="button" id="Gender" name="Gender" />Male
-      <input type="button" id="Gender" name="Gender" />Female<br />
+      <input type="radio" id="Gender" name="Gender" />Male<br />
+      <input type="radio" id="Gender" name="Gender" />Female<br />
       <label for="Address">Address</label><br />
-      <input type="text" id="Address" name="Address" /><br />
+      <textarea type="text" id="Address" name="Address" rows="8" cols="40"/></textarea><br>
       <button type="button">Save</button>
       <button type="button">Clear</button>
     </form>

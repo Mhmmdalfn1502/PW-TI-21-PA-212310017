@@ -44,15 +44,58 @@
       color: red;
       transition: 0.5s;
     }
-    .bulet {
-      height: 450px;
-      width: 450px;
+    /* .bulet {
+      height: 320px;
+      width: 320px;
       right: 30%;
       left: 500%;
-      transform: translateX(190%);
       border-radius: 100%;
+      transform: translateX(190%);
       background-color: rgb(168, 44, 44);
+      animation: bulet 8s linear infinite;
+      margin-top: 70px;
+      margin-left: 910px;
     }
+    .bulet:before {
+      content: " ";
+      margin-top: 70px;
+      margin-left: 910px;
+      width: 320px;
+      height: 200px;
+      background: rgb(168, 44, 44);
+      border-top-left-radius: 200px;
+      border-top-right-radius: 200px;
+    }
+    .bulet:after {
+      content: " ";
+      margin-top: 70px;
+      margin-left: 910px;
+      width: 200px;
+      height: 320px;
+      background: rgb(168, 44, 44);
+      border-top-left-radius: 200px;
+      border-top-right-radius: 200px;
+    }
+    @keyframes bulet {
+      0% {
+        transform: rotate(45deg) scale(1);
+      }
+      20% {
+        transform: rotate(45deg) scale(0.8);
+      }
+      40% {
+        transform: rotate(45deg) scale(1.2);
+      }
+      60% {
+        transform: rotate(45deg) scale(1);
+      }
+      80% {
+        transform: rotate(45deg) scale(1.3);
+      }
+      100% {
+        transform: rotate(45deg) scale(1);
+      } */
+    /* } */
     .photo {
       height: 90%;
       width: 40%;
@@ -71,15 +114,31 @@
     .content .welcome {
       border: 1px solid black;
       padding: 15px 20px;
-      background-color: rgb(255, 210, 210);
+      background-color: brown;
       border-radius: 5px;
     }
     .content h1 {
       margin: 20px 0 5px;
       font-size: 50px;
       font-family: "Times New Roman", Times, serif;
+      color: transparent;
+      background: linear-gradient(to right, #d560ff, #8e004c, #650000, #9b9b00, #102930);
+      -webkit-background-clip: text;
+      background-size: 1000%;
+      animation: ani 5s linear infinite;
     }
-    p {
+    @keyframes ani {
+      0% {
+        background-position: 0 100%;
+      }
+      50% {
+        background-position: 100% 0%;
+      }
+      100% {
+        background-position: 0 100%;
+      }
+    }
+    .content p {
       margin-top: 40px;
       width: 500px;
       line-height: 30px;
@@ -92,67 +151,157 @@
     }
     .Portfolio {
       background-color: rgb(23, 1, 42);
-      height: 100vh;
+      height: 100%;
       width: 100%;
+      padding-bottom: 20px;
+      /* margin-bottom: 20px; */
+    }
+    .Portfolio p {
+      margin-top: 20px;
     }
     .content2 {
       color: white;
       margin-left: 60px;
       padding-top: 50px;
-      justify-content: space-between;
     }
-    .content2 ul li {
-      list-style-type: none;
-      display: inline-block;
-      padding: 10px 0px;
+    .row-gallery {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: auto;
+      background-color: transparent;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 400px;
+      border-radius: 5px;
+    }
+    .contact-me {
+      width: 100%;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: rgb(23, 1, 42);
+    }
+    .contact-text h1 {
       color: white;
+      font-size: 50px;
+      text-transform: capitalize;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .contact-Box {
+      color: white;
+    }
+    */ .contact-Box:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .contact {
+      width: 50%;
+      padding: 30px;
+      box-sizing: border-box;
+      text-align: center;
+      float: left;
+    }
+    .contact h4 {
+      padding-bottom: 5px;
+      color: red;
+    }
+    .contact p {
+      font-size: 18px;
     }
   </style>
 
   <body>
     <!-- AWAL HOME -->
+    <div>
+      <div class="home" id="Home">
+        <nav>
+          <img src="image/LOGO_FANTASTECCC (WHITE).png" class="LOGO" />
+          <ul>
+            <li><a href="Latihan3.html" style="color: white">Profile</a></li>
+            <li><a href="#Home" style="color: white">About me</a></li>
+            <li><a href="#Portfolio" style="color: white">Portfolio</a></li>
+            <li><a>Blog</a></li>
+            <li><a href="#contact Us" style="color: white">Contact Us</a></li>
+            <a class="btn" href="https://layanan.pintarnya.com/wp-content/uploads/2022/11/Template-CV-dari-Pintarnya-1_dilan-page-0001.jpg">Download CV</a>
+          </ul>
+        </nav>
+        <div>
+          <div class="bulet"></div>
+          <img src="image/alan2.png" class="photo" />
+        </div>
+        <div class="content">
+          <span class="welcome"> Welcome I'm </span>
+          <h1>Muhammad Alfan</h1>
+          <a>UI Designer | Frontend Developer</a>
+          <br />
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, impedit illum. Rerum expedita, laborum aliquid, suscipit quo ipsa sequi, eos eum illum minima repellendus voluptatibus eius? Explicabo suscipit nemo nam?</p>
+        </div>
+      </div>
 
-    <div class="home" id="Home">
-      <nav>
-        <img src="image/LOGO_FANTASTECCC (WHITE).png" class="LOGO" />
-        <ul>
-          <li><a href="#Home">About me</a></li>
-          <li><a href="#Portfolio">Portfolio</a></li>
-          <li><a>Blog</a></li>
-          <li><a>Contact Us</a></li>
-          <a class="btn">Download CV</a>
-        </ul>
-      </nav>
-      <div>
-        <div class="bulet"></div>
-        <img src="image/alan2.png" class="photo" />
+      <!-- AKHIR HOME -->
+
+      <div style="background-color: #280037; width: 100%; height: 10vh"></div>
+
+      <!-- AWAL PORTFOLIO -->
+
+      <div class="Portfolio" id="Portfolio">
+        <div class="content2">
+          <h1 style="font-size: 50px; margin-left: 50px">Portfolio</h1>
+          <p style="margin-left: 50px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi nihil officiis voluptates.</p>
+        </div>
+        <div class="row-gallery">
+          <div class="gallery">
+            <img src="/image/portfolio/Slide1.png" onclick="onClick(this)" />
+            <img src="/image/portfolio/Slide2.png" onclick="onClick(this)" />
+            <img src="/image/portfolio/Slide3.png" onclick="onClick(this)" />
+          </div>
+          <div class="gallery">
+            <img src="/image/portfolio/Slide4.png" onclick="onClick(this)" />
+            <img src="/image/portfolio/Slide5.png" onclick="onClick(this)" />
+            <img src="/image/portfolio/Slide6.png" onclick="onClick(this)" />
+          </div>
+        </div>
       </div>
-      <div class="content">
-        <span class="welcome"> <a href="Latihan3.html">Profile</a></span>
-        <h1>Muhammad Alfan</h1>
-        <a>UI Designer | Frontend Developer</a>
-        <br />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, impedit illum. Rerum expedita, laborum aliquid, suscipit quo ipsa sequi, eos eum illum minima repellendus voluptatibus eius? Explicabo suscipit nemo nam?</p>
+
+      <!-- AKHIR PORTFOLIO -->
+
+      <div style="background-color: #280037; width: 100%; height: 10vh"></div>
+
+      <!-- AWAL CONTACT -->
+
+      <div class="contact-me" id="contact Us">
+        <div class="contact-text">
+          <h1>Contact Us</h1>
+          <div class="contact-info">
+            <div class="contact-Box">
+              <div class="contact">
+                <h4>Address</h4>
+                <p>Jl. Walet no 13</p>
+              </div>
+              <div class="contact">
+                <h4>Email</h4>
+                <p>Malfan227@gmail.com</p>
+              </div>
+              <div class="contact">
+                <h4>Telp</h4>
+                <p>08984977703</p>
+              </div>
+              <div class="contact">
+                <h4>Instagram</h4>
+                <p><a href="https://www.instagram.com/mhmmdalfn_1502/" style="color: white">mhmmdalfn_1502</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.5969930325114!2d106.79690816455692!3d-6.572438695246628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c43945d1da6f%3A0x986dee2b8f2a787!2sJl.%20Walet%20No.13%2C%20RT.02%2FRW.06%2C%20Tanah%20Sareal%2C%20Kec.%20Tanah%20Sereal%2C%20Kota%20Bogor%2C%20Jawa%20Barat%2016161!5e0!3m2!1sid!2sid!4v1679651490183!5m2!1sid!2sid" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="600" height="450" style="boder:0;" allowfullscreen:"" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="align-items: center;"></iframe> -->
       </div>
+
+      <!-- AKHIR CONTACT -->
     </div>
-
-    <!-- AKHIR HOME -->
-
-    <div style="background-color: #350048; width: 100%; height: 10vh"></div>
-
-    <!-- AWAL PORTFOLIO -->
-    <section class="Portfolio" id="Portfolio">
-      <div class="content2">
-        <h1>Portfolio</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi nihil officiis voluptates.</p>
-        <ul>
-          <li><a>All Work</a></li>
-          <li><a>Personal Project</a></li>
-          <li><a>Professional Project</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- AKHIR PORTFOLIO -->
   </body>
 </html>

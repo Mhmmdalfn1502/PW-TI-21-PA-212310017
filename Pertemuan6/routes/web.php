@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return "welcome";
+    return view('welcome');
 });
 
-Route::get('/profile', [ProfileController::class, 'index']);
-Route::get('/profilee', [ProfileController::class, 'skillAcademic']);
-Route::get('/profile/identity', [ProfileController::class, 'identity']);
-Route::get('/profile/family', [ProfileController::class, 'family']);
+Route::controller(UserController::class)->group(function () {
+    Route::get('/users', 'index')->name('m_user');
+    Route::post('/users', 'store');
+    Route::get('/users/edit/{id}', 'edit')->name('m_user_edit');
+    Route::get('/users/remove/{id}', 'destroy')->name('m_user_remove');
+});
